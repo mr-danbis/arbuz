@@ -1,11 +1,11 @@
 //settings
-@use 'settings/vars';
-@use 'settings/fonts';
-@use 'settings/reset';
-@use 'settings/global';
+@import 'settings/vars';
+@import 'settings/fonts';
+@import 'settings/reset';
+@import 'settings/global';
 
 //common blocks
-@use '../blocks/header/header';
-@use '../blocks/footer/footer';
+@import '../blocks/header/header';
+@import '../blocks/footer/footer';
 
 //main page blocks

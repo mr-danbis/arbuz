@@ -1,14 +1,7 @@
 html,
 body {
-    overflow-x: hidden;
-    height: 100%;
-    background-color: #000;
-    color: #fff;
-}
-
-.box {
-    height: 100vh;
-    width: 100vw;
+    background-color: rgb(255, 255, 255);
+    color: $mainColor;
 }
 
 .wrapper {
@@ -26,6 +19,54 @@ body {
 }
 
 .container {
-    width: 80%;
+    width: 1280px;
     margin: 0 auto;
+}
+
+.logo {
+    color: $mainColor;
+    font-family: MerriweatherBold;
+    @include adaptive-font(36, 22);
+    font-size: 36px;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+
+    &__link {
+        transition: all .3s;
+        &:not(:last-child) {
+            margin-right: 9px;
+        }
+
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
+}
+
+.link {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: $mainColor;
+        transition: transform 0.3s ease;
+        transform: scaleX(0);
+        transform-origin: bottom right;
+    }
+
+    &:hover::before {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
 }

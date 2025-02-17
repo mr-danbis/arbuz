@@ -1,0 +1,97 @@
+.header {
+    padding: 25px 0;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__nav {
+        width: 46.3%;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__item {
+        position: relative;
+
+        &-sublist {
+            &::after {
+                position: absolute;
+                content: url(/images/icons/arrow.svg);
+                right: -15px;
+            }
+
+            &:hover {
+                .header {
+                    &__sublist {
+                        display: block;
+                    }
+                    
+                    &__item{
+                        &-sublist{
+                            &::after {
+                                transform: rotate(180deg);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__link {
+        color: $mainColor;
+        font-family: GolosTextRegular;
+        font-size: 16px;
+    }
+
+    &__sublist {
+        display: none;
+        position: absolute;
+        left: 10px;
+    }
+
+    &__subitem {
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__sublink {
+        color: $mainColor;
+        font-family: GolosTextRegular;
+        font-size: 16px;
+    }
+
+    &__contact {
+        width: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__phone {
+        font-family: GolosTextRegular;
+        color: $mainColor;
+        font-size: 16px;
+    }
+
+    &__lang {
+        &-btn {
+            font-family: GolosTextRegular;
+            color: $mainColor;
+            font-size: 16px;
+            text-decoration: underline;
+
+            &--active {
+                display: none;
+            }
+        }
+    }
+}
