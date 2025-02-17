@@ -2,7 +2,7 @@
     @include adaptive-paddingBottom(46,20);
 
     &__wrapper {
-        padding: 60px 100px 80px 100px;
+        padding: 86px 100px 80px 100px;
         background-image: url(/images/screen.svg);
         background-repeat: no-repeat;
         border-radius: 16px;
@@ -13,7 +13,7 @@
     }
 
     &__title {
-        width: 65%;
+        width: 64%;
         color: rgb(255, 255, 255);
         font-family: MerriweatherRegular;
         @include adaptive-font(42, 28);

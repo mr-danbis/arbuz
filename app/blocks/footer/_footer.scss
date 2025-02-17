@@ -4,14 +4,17 @@
     background-color: rgb(241, 244, 253);
     font-family: GolosTextRegular;
 
+    .logo{
+        margin-right: 320px;
+    }
+
     &__top {
         display: flex;
-        justify-content: space-between;
-        margin-bottom: 12px;
+        margin-bottom: 17px;
     }
 
     &__links {
-        width: 57.7%;
+        margin-top: 7px;
         display: flex;
         justify-content: space-between;
 
@@ -33,6 +36,12 @@
     }
 
     &__column {
+        &:first-child{
+            margin-right: 122px;
+        }
+        &:nth-child(2){
+            margin-right: 82px;
+        }
         &-title {
             color: rgb(121, 158, 229);
             font-size: 16px;
@@ -41,19 +50,19 @@
     }
 
     &__center {
-        margin-bottom: 15px;
+        margin-bottom: 18px;
     }
 
     &__address {
         color: $mainColor;
         font-size: 16px;
-        margin-bottom: 7px;
+        margin-bottom: 9px;
     }
 
     &__phone {
         display: flex;
         align-items: center;
-        margin-bottom: 7px;
+        margin-bottom: 10px;
 
         &-number,
         span {
@@ -73,12 +82,10 @@
 
     &__bottom {
         display: flex;
-        justify-content: space-between;
     }
 
     &__info {
         font-size: 12px;
-        width: 52.8%;
 
         &-text {
             color: rgb(121, 158, 229);
@@ -122,6 +129,7 @@
     }
 
     .social {
+        margin-right: 333px;
         &__link {
             width: 45px;
             height: 45px;
