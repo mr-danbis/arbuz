@@ -43,7 +43,7 @@ function scripts() {
 
 
 // function images() {
-//   return src("app/images/**/*").pipe(dest("docs/images"));
+//   return src("appimages/**/*").pipe(dest("docsimages"));
 // }
 
 function browsersync() {
