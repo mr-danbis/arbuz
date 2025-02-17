@@ -1,5 +1,6 @@
 html,
 body {
+    height: 100%;
     background-color: rgb(255, 255, 255);
     color: $mainColor;
 }
@@ -35,9 +36,16 @@ body {
     align-items: center;
 
     &__link {
+        width: 30px;
+        height: 30px;
         transition: all .3s;
         &:not(:last-child) {
             margin-right: 9px;
+        }
+
+        img{
+            width: 100%;
+            height: 100%;
         }
 
         &:hover{

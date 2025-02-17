@@ -1,0 +1,130 @@
+.footer {
+    padding-top: 70px;
+    padding-bottom: 50px;
+    background-color: rgb(241, 244, 253);
+    font-family: GolosTextRegular;
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 12px;
+    }
+
+    &__links {
+        width: 57.7%;
+        display: flex;
+        justify-content: space-between;
+
+        &-list {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-item {
+            &:not(:last-child) {
+                margin-bottom: 8px;
+            }
+        }
+
+        &-link {
+            color: $mainColor;
+            font-size: 16px;
+        }
+    }
+
+    &__column {
+        &-title {
+            color: rgb(121, 158, 229);
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+    }
+
+    &__center {
+        margin-bottom: 15px;
+    }
+
+    &__address {
+        color: $mainColor;
+        font-size: 16px;
+        margin-bottom: 7px;
+    }
+
+    &__phone {
+        display: flex;
+        align-items: center;
+        margin-bottom: 7px;
+
+        &-number,
+        span {
+            color: $mainColor;
+            font-size: 16px;
+        }
+
+        &-number {
+            margin-right: 5px;
+        }
+    }
+
+    &__email {
+        color: $mainColor;
+        font-size: 16px;
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__info {
+        font-size: 12px;
+        width: 52.8%;
+
+        &-text {
+            color: rgb(121, 158, 229);
+            margin-bottom: 10px;
+        }
+
+        &-list {
+            display: flex;
+            align-items: center;
+        }
+
+        &-item {
+            padding: 0 5px;
+            position: relative;
+
+            &:first-child {
+                padding-left: 0;
+            }
+
+            &:last-child {
+                padding-right: 0;
+            }
+
+            &:not(:last-child) {
+                &:after {
+                    position: absolute;
+                    content: '•';
+                    color: rgb(121, 158, 229);
+                    right: -3px;
+                }
+            }
+        }
+
+        &-link {
+            color: rgb(121, 158, 229);
+
+            &::before {
+                background-color: rgb(121, 158, 229);
+            }
+        }
+    }
+
+    .social {
+        &__link {
+            width: 45px;
+            height: 45px;
+        }
+    }
+}
