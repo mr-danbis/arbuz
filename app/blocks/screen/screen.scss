@@ -1,0 +1,91 @@
+.screen {
+    @include adaptive-paddingBottom(46,20);
+
+    &__wrapper {
+        padding: 60px 100px 80px 100px;
+        background-image: url(/images/screen.svg);
+        background-repeat: no-repeat;
+        border-radius: 16px;
+    }
+
+    &__info {
+        @include adaptive-marginBottom(74, 24);
+    }
+
+    &__title {
+        width: 65%;
+        color: rgb(255, 255, 255);
+        font-family: MerriweatherRegular;
+        @include adaptive-font(42, 28);
+        line-height: 50px;
+        @include adaptive-marginBottom(24, 17);
+    }
+
+    &__text {
+        width: 51%;
+        color: rgb(255, 255, 255);
+        font-family: GolosTextRegular;
+        @include adaptive-font(16, 15);
+        line-height: 24px;
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__btn {
+        margin-right: 50px;
+
+        img {
+            margin-left: 20px;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__connect {
+        display: flex;
+        align-items: center;
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+    }
+
+    &__link {
+        transition: all .3s;
+        height: 24px;
+        width: 24px;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        &:not(:last-child) {
+            margin-right: 13px;
+        }
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+
+    &__name {
+        color: rgb(255, 255, 255);
+        font-family: MerriweatherRegular;
+        font-size: 20px;
+        margin-bottom: 6px;
+    }
+
+    &__position {
+        color: rgb(255, 255, 255);
+        font-family: GolosTextRegular;
+        font-size: 15px;
+    }
+}

@@ -39,16 +39,17 @@ body {
         width: 30px;
         height: 30px;
         transition: all .3s;
+
         &:not(:last-child) {
             margin-right: 9px;
         }
 
-        img{
+        img {
             width: 100%;
             height: 100%;
         }
 
-        &:hover{
+        &:hover {
             transform: scale(1.2);
         }
     }
@@ -76,5 +77,28 @@ body {
     &:hover::before {
         transform: scaleX(1);
         transform-origin: bottom left;
+    }
+}
+
+.btn {
+    display: inline-flex;
+    color: rgb(255, 255, 255);
+    font-family: GolosTextRegular;
+    font-size: 16px;
+    padding: 18px 38px;
+    border-radius: 50px;
+    background: linear-gradient(90.00deg, rgba(0, 72, 206, 0.4), rgba(212, 223, 248, 0.4) 100%), rgb(0, 72, 206);
+    transition: all .3s;
+    &:hover {
+        background: rgb(0, 72, 206);
+    }
+
+    &:active {
+        background: linear-gradient(90.00deg, rgba(0, 72, 206, 0), rgba(212, 223, 248, 0) 100%), rgb(0, 58, 166);
+    }
+
+    &:disabled {
+        background: rgba(0, 72, 206, 0.2);
+        cursor: not-allowed;
     }
 }
