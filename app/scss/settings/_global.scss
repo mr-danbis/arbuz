@@ -29,7 +29,6 @@ body {
     color: $mainColor;
     font-family: MerriweatherBold;
     @include adaptive-font(36, 22);
-    font-size: 36px;
 }
 
 .social {

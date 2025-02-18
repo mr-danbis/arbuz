@@ -28,10 +28,22 @@ const openCloseSidebar = () => {
     });
 }
 
+const openFooterSubList = () => {
+    const footerColumn = document.querySelectorAll('.footer__column');
+
+    footerColumn.forEach(el => {
+        el.addEventListener('click', () => {
+            el.classList.toggle('footer__column--active');;
+        });
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', function () {
         fixedHeaderWhenScrolling();
     });
 
     openCloseSidebar();
+
+    openFooterSubList();
 });
