@@ -109,3 +109,15 @@ body {
         width: 87.2%;
     }
 }
+
+@media (max-width: 400px) {
+    .btn{
+        padding: 15px 38px;
+    }
+}
+
+@media (max-width: 360px) {
+    .btn{
+        padding: 15px 20px;
+    }
+}
