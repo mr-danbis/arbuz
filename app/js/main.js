@@ -1,5 +1,6 @@
+const header = document.querySelector('.header');
+
 const fixedHeaderWhenScrolling = () => {
-    const header = document.querySelector('.header');
     if (window.scrollY > 0) {
         header.classList.add('header--fixed');
     } else {
@@ -22,6 +23,7 @@ const openCloseSidebar = () => {
     burgerBtn.addEventListener('click', () => {
         const isOpen = sidebar.classList.toggle('sidebar--open');
         burgerBtn.classList.toggle('header__burger--open');
+        sidebar.style.top = window.getComputedStyle(header).height;
         toggleScroll(isOpen);
     });
 }
