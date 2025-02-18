@@ -6,6 +6,7 @@ body {
 }
 
 .wrapper {
+    padding-top: 95.5px;
     display: flex;
     flex-direction: column;
     min-height: 100%;
@@ -100,5 +101,11 @@ body {
     &:disabled {
         background: rgba(0, 72, 206, 0.2);
         cursor: not-allowed;
+    }
+}
+
+@media (max-width: 1350px) {
+    .container {
+        width: 87.2%;
     }
 }

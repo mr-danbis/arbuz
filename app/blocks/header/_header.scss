@@ -1,5 +1,17 @@
 .header {
+    z-index: 5;
     padding: 25px 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: #fff;
+    transition: all .3s;
+
+    &--fixed {
+        position: fixed;
+        box-shadow: 0px 12px 10px -4px rgba(34, 60, 80, 0.2);
+    }
 
     &__wrapper {
         display: flex;
@@ -22,7 +34,7 @@
 
         &-sublist {
             &::after {
-                transition: all .3s;
+                transition: all .5s;
                 position: absolute;
                 content: url(/images/icons/arrow.svg);
                 right: -15px;
@@ -33,6 +45,7 @@
                     top: 4px;
                     transform: rotate(180deg);
                 }
+
                 .header {
                     &__sublist {
                         display: block;
@@ -91,6 +104,84 @@
             &--active {
                 display: none;
             }
+        }
+    }
+
+    &__burger {
+        width: 30px;
+        height: 19px;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+
+        div {
+            transition: all .3s;
+            width: 100%;
+            height: 1px;
+            background-color: $mainColor;
+        }
+
+        &--open {
+            div {
+                position: absolute;
+                width: 30px;
+                height: 1px;
+                background-color: $mainColor;
+
+                &:first-child {
+                    transform: rotate(45deg);
+                    top: 50%;
+                }
+
+                &:nth-child(2) {
+                    display: none;
+                }
+
+                &:last-child {
+                    transform: rotate(-45deg);
+                    top: 50%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .header {
+        &__nav {
+            width: 46%;
+        }
+
+        &__contact {
+            width: 30%;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .header {
+        &__nav {
+            display: none;
+        }
+
+        .social {
+            display: none;
+        }
+
+        &__phone {
+            display: none;
+        }
+
+        &__contact {
+            width: auto;
+        }
+
+        &__burger {
+            display: flex;
+        }
+
+        &__lang {
+            margin-right: 35px;
         }
     }
 }

@@ -1,0 +1,79 @@
+.sidebar {
+    position: fixed;
+    top: 95.5px;
+    bottom: 0;
+    right: -200%;
+    width: 100vw;
+    z-index: 6;
+    background-color: #fff;
+    padding: 10px 24px;
+    transition: all .5s;
+    
+    &--open{
+        right: 0;
+    }
+
+    &__nav {
+        margin-bottom: 60px;
+    }
+
+    &__item {
+        font-family: MerriweatherRegular;
+        font-size: 30px;
+
+        &:not(:last-child) {
+            margin-bottom: 28px;
+        }
+    }
+
+    &__link {
+        color: $mainColor;
+    }
+
+    &__sublist {
+        margin-left: 20px;
+    }
+
+    &__subitem {
+        font-family: GolosTextRegular;
+        font-size: 16px;
+
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__sublink {
+        color: $mainColor;
+    }
+
+    &__phones {
+        margin-bottom: 10px;
+    }
+
+    &__phone {
+        display: flex;
+        align-items: center;
+        font-family: GolosTextRegular;
+        font-size: 14px;
+
+        &-number {
+            color: rgb(0, 72, 206);
+        }
+
+        &-city{
+            margin-left: 7px;
+        }
+
+        &:not(:last-child){
+            margin-bottom: 10px;
+        }
+    }
+
+    .social {
+        &__link {
+            width: 40px;
+            height: 40px;
+        }
+    }
+}
